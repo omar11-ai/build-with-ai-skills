@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Build With AI — the spec-driven agent workflow</title>
+<meta name="description" content="Six spec-driven agent skills: scope -> PRD -> spec -> verified build -> ship.">
+<style>
+:root{--bg:#0b0d10;--panel:#14171c;--line:#232830;--fg:#e8eaed;--mut:#9aa3af;--acc:#6ea8fe}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.65 ui-sans-serif,system-ui,"Segoe UI",Roboto,sans-serif}
+.wrap{max-width:720px;margin:0 auto;padding:56px 22px 96px}
+.eyebrow{color:var(--acc);font:600 12px ui-monospace,Menlo,monospace;letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px}
+h1{font-size:clamp(30px,5.5vw,44px);line-height:1.12;margin:0 0 18px;letter-spacing:-.02em}
+p{color:var(--mut)}a{color:var(--acc)}
+.lede{font-size:18px;color:#c9d1d9}
+.cta{display:inline-block;background:var(--acc);color:#08121f;font-weight:700;padding:13px 22px;border-radius:10px;text-decoration:none;margin:10px 8px 10px 0}
+.cta.ghost{background:transparent;color:var(--fg);border:1px solid var(--line)}
+ul{padding-left:20px;color:var(--mut)}li{margin:8px 0}li b{color:var(--fg)}
+table{width:100%;border-collapse:collapse;margin:22px 0;font-size:14px}
+th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+th{color:var(--fg);font-weight:600}td{color:var(--mut)}
+code{font:13px ui-monospace,Menlo,monospace;background:var(--panel);border:1px solid var(--line);border-radius:5px;padding:2px 6px;color:#ffa657}
+footer{margin-top:60px;padding-top:22px;border-top:1px solid var(--line);color:var(--mut);font-size:13px}
+</style></head><body><div class="wrap">
+<div class="eyebrow">Agent workflow</div>
+<h1>Stop prompting. Start specifying.</h1>
+<p class="lede">Six skills that take any project from a vague idea to a shipped, verified product — discovery, scope cutting, PRD, technical spec, verified build, and public launch.</p>
+<a class="cta" href="https://github.com/omar11-ai/build-with-ai-skills">Get the skills on GitHub</a>
+<a class="cta ghost" href="https://github.com/omar11-ai/documentor">See DocuMentor</a>
+
+<h2>The pipeline</h2>
+<table>
+<tr><th>Skill</th><th>Produces</th><th>What it solves</th></tr>
+<tr><td><b>1-start</b></td><td>learner-profile.md</td><td>Learns your background so later steps are calibrated to you</td></tr>
+<tr><td><b>2-scope</b></td><td>scope.md</td><td>Flipped-interaction interview; cuts the idea to a proof of concept</td></tr>
+<tr><td><b>3-prd</b></td><td>prd.md</td><td>Core journey, every behavior, states, edge cases, firm scope boundary</td></tr>
+<tr><td><b>4-spec</b></td><td>spec.md</td><td>Stack, components, data model, file structure</td></tr>
+<tr><td><b>5-build</b></td><td>working code</td><td>Ordered steps, each verified and committed before the next</td></tr>
+<tr><td><b>6-ship</b></td><td>public repo + submission</td><td>PoC verification, demo video script, written submission</td></tr>
+</table>
+
+<h2>Install</h2>
+<pre><code>git clone https://github.com/omar11-ai/build-with-ai-skills.git ~/.config/opencode/skills</code></pre>
+<p>Per project: <code>mkdir -p .opencode/skills && cp -r skills/* .opencode/skills/</code></p>
+
+<h2>Why it works</h2>
+<ul>
+<li><b>Context is never lost.</b> Each skill reads the previous skill's artifact from disk.</li>
+<li><b>Scope gets cut, not expanded.</b> 2-scope and 3-prd refuse to proceed until the boundary is firm.</li>
+<li><b>Verification is structural.</b> 5-build commits only after a step passes; 6-ship verifies before anything goes public.</li>
+</ul>
+
+<footer>MIT licensed. Built by Omar Wael in Malaysia.</footer>
+</div></body></html>
